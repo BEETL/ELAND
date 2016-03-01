@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8">
+<!DOCTYPE TestSuite [
+   <!ELEMENT TestSuite(dataSet, fasta*, readMode*, GERALD*, GERALDFolder*, type*, testSpecification*, lane*, tile*)>
+      <!ATTLIST TestSuite id CDATA #REQUIRED,
+                          cycles CDATA #REQUIRED>
+      <!ELEMENT dataSet (#PCDATA)>
+      <!ELEMENT fasta (#PCDATA)>
+      <!ELEMENT readMode (#PCDATA)>
+      <!ELEMENT GERALD (#PCDATA)>
+      <!ELEMENT GERALDFolder (#PCDATA)>
+      <!ELEMENT type (#PCDATA)>
+      <!ELEMENT testSpecification (#PCDATA)>
+      <!ELEMENT lane (#PCDATA)>
+      <!ELEMENT tile (#PCDATA)>
+         <!ATTLIST dataSet id CDATA #REQUIRED,
+                           cycles CDATA #REQUIRED>
+]>
+
+
+<TestSuite id="" cycles="">
+   <dataSet id="" cycles="" />
+   <fasta></fasta>
+   <readMode></readMode>
+   <GERALD></GERALD>
+   <GERALDFolder></GERALDFolder>
+   <type></type>
+   <testSpecification></testSpecification>
+</TestSuite>
+
+
+

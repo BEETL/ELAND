@@ -1,0 +1,4 @@
+Purpose:    Helper modules that get installed into 
+            <install root>/lib/CSAVA_v<major>.<minor>.<development>/perl/
+Content:    Hierarchy of perl modules
+Naming:     Camel case. All names being with capital letter. 

@@ -1,0 +1,45 @@
+# -------------------
+# define our includes
+# -------------------
+
+# ----------------------------------
+# define our source and object files
+# ----------------------------------
+
+TARGET=samtools
+
+SAMTOOLS_DIR=samtools-0.1.8
+SAMTOOLS_TAR=$(SAMTOOLS_DIR).tar.gz
+SAMTOOLS_BUILT=$(SAMTOOLS_DIR)_DONE
+
+
+TAR=tar
+TARFLAGS=-zxvf
+
+all: samtools export2sam.pl
+
+
+samtools: $(SAMTOOLS_BUILT)
+	@echo "  * building $@"
+	cp $(SAMTOOLS_DIR)/$@ $(BIN_DIR)/$@
+
+
+export2sam.pl : $(SAMTOOLS_BUILT)
+	@echo "  * building $@"
+	cp $(SAMTOOLS_DIR)/misc/$@ $(BIN_DIR)/$@
+
+
+
+.PHONY: all
+
+$(SAMTOOLS_BUILT): $(SAMTOOLS_TAR)
+	@echo "  * building $(TARGET) from $(DEPS)"
+	$(TAR) $(TARFLAGS) $^
+	make -C $(SAMTOOLS_DIR)
+	touch $@
+
+clean:
+	@echo "Cleaning up."
+	@rm -rf $(SAMTOOLS_BUILT) $(SAMTOOLS_DIR) $(BIN_DIR)/samtools $(BIN_DIR)/export2sam.pl
+
+.PHONY: clean

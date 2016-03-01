@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8">
+<!DOCTYPE TestCampaign [
+   <!ELEMENT TestCampaign(campaignName, runFolder+, testSuite*)>
+      <!ELEMENT campaignName (#PCDATA)>
+      <!ELEMENT runFolder (#PCDATA)>
+      <!ELEMENT testSuite (#PCDATA)>
+]>
+
+
+<TestCampaign>
+   <campaignName></campaignName>
+   <runFolder></runFolder>
+   <testSuite></testSuite>
+</TestCampaign>
+

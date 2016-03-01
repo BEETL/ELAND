@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8">
+<!DOCTYPE TestSpecification [
+   <!ELEMENT TestSpecification(type*,
+                               setUpPostCommand*, 
+                               tearDownPostCommand*, 
+                               testCommand, 
+                               expectedOutput*, 
+                               expectedError*, 
+                               xpath*)>
+
+   <!ATTLIST TestSpecification id CDATA #IMPLICIT,
+                               tag CDATA #IMPLICIT,
+                               set CDATA #IMPLICIT,
+                               compatibility #IMPLICIT,
+                               cycles CDATA #IMPLICIT,
+                               lanes CDATA #IMPLICIT,
+                               tiles CDATA #IMPLICIT,
+                               enabled CDATA #IMPLICIT,
+                               script CDATA #IMPLICIT,
+                               setUp CDATA #IMPLICIT,
+                               tearDown CDATA #IMPLICIT>
+
+      <!ELEMENT type (#PCDATA)>
+      <!ELEMENT setUpPostCommand (#PCDATA)>
+      <!ELEMENT tearDownPostCommand (#PCDATA)>
+      <!ELEMENT testCommand (#PCDATA)>
+      <!ELEMENT expectedOutput (#PCDATA)>
+      <!ELEMENT expectedError (#PCDATA)>
+      <!ELEMENT xpath (#PCDATA)>
+         <!ATTLIST setUpPostCommand cmd CDATA #REQUIRED>
+         <!ATTLIST tearDownPostCommand cmd CDATA #REQUIRED>
+         <!ATTLIST testCommand testSet CDATA #REQUIRED,
+                               cmd CDATA #REQUIRED,
+                               count CDATA #REQUIRED>
+         <!ATTLIST expectedOutput testSet CDATA #IMPLICIT,
+                                  out CDATA #IMPLICIT>
+         <!ATTLIST expectedError testSet CDATA #IMPLICIT,
+                                 out CDATA #IMPLICIT>
+         <!ATTLIST xpath testSet CDATA #IMPLICIT,
+                         file CDATA #IMPLICIT,
+                         out CDATA #IMPLICIT
+                         query CDATA #IMPLICIT,
+                         count CDATA #IMPLICIT>
+]>
+
+<TestSpecification id="" tag="" set="" compatibility="" cycles="" lanes="" tiles="" enabled="" script="Casava" setUp="" tearDown="">
+  <type></type>
+   <setUpPostCommand cmd=""/>
+   <tearDownPostCommand cmd=""/>
+   <testCommand testSet="" cmd="" count=""/>
+   <expectedOutput testSet="" out=""/>
+   <expectedError testSet="" out=""/>
+   <xpath testSet="" file="" out="" query="" count=""/>
+</TestSpecification>
+
+
+

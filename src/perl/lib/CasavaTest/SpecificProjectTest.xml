@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProjectTests[
+   <!ELEMENT ProjectTests (TestCampaign*)>
+      <!ELEMENT TestCampaign (#PCDATA)>
+]>
+
+<ProjectTests>
+   <TestCampaign></TestCampaign>
+</ProjectTests>
+
